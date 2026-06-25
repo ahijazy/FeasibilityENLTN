@@ -1,0 +1,21 @@
+2026-06-25 16:47:29	[Main thread]	INFO	FeasibilityENLTN	execute	Creating cohorts
+2026-06-25 16:47:29	[Main thread]	INFO	DatabaseConnector	connectPostgreSql	Connecting using PostgreSQL driver
+2026-06-25 16:47:29	[Main thread]	INFO	CohortGenerator	createCohortTables	Table "cohort" already exists and in incremental mode, so not recreating it.
+2026-06-25 16:47:29	[Main thread]	INFO	CohortGenerator	createCohortTables	Table "cohort" already exists and in incremental mode, so not recreating it.
+2026-06-25 16:47:29	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables
+2026-06-25 16:47:32	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table synpuf_110k.cdm_531.cohort_inclusion
+2026-06-25 16:47:32	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table synpuf_110k.cdm_531.cohort_inclusion_result
+2026-06-25 16:47:32	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table synpuf_110k.cdm_531.cohort_inclusion_stats
+2026-06-25 16:47:32	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table synpuf_110k.cdm_531.cohort_summary_stats
+2026-06-25 16:47:32	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table synpuf_110k.cdm_531.cohort_censor_stats
+2026-06-25 16:47:32	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table synpuf_110k.cdm_531.cohort_subset_attrition
+2026-06-25 16:47:32	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table synpuf_110k.cdm_531.cohort_checksum
+2026-06-25 16:47:32	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables took 3.03secs
+2026-06-25 16:47:32	[Main thread]	INFO	CohortGenerator	getCohortDefinitionSet	Loading cohortDefinitionSet
+2026-06-25 16:47:32	[Main thread]	WARN	CohortGenerator	generateCohortSet	incrementalFolder parameter is no longer used and will be removed in a future version
+2026-06-25 16:47:32	[Main thread]	INFO	DatabaseConnector	connectPostgreSql	Connecting using PostgreSQL driver
+2026-06-25 16:47:33	[Main thread]	INFO	CohortGenerator	generateCohortSet	Skipping cohorts already generated:  
+2026-06-25 16:47:33	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2026-06-25 16:47:33	[Main thread]	INFO	CohortGenerator	FUN	1/6- Generating cohort: HTN population (id = 1305)
+2026-06-25 16:50:11	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 2.62 mins
+2026-06-25 16:50:11	[Main thread]	INFO	CohortGenerator	FUN	2/6- Generating cohort: CKD population (id = 1314)

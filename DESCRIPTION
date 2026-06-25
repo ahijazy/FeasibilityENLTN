@@ -1,0 +1,24 @@
+Package: FeasibilityENLTN
+Type: Package
+Title: A Study Package for Generating Cohort Diagnostics
+Version: 0.0.1
+Author: Ayman Hijazy [aut, cre]
+Date: 2023-02-11
+Maintainer: Ayman Hijazy <ayman_hijazy@epam.com>
+Description: A package that generates cohort diagnostics for cohort definitions included in the package.
+Depends:
+  R (>= 4.1.0)
+Imports:
+	CohortDiagnostics (>= 3.4.2),
+  CohortGenerator (>= 1.1.0),
+	ParallelLogger (>= 3.5.1),
+	DatabaseConnector (>= 7.1.0),
+  keyring,
+  jsonlite
+Suggests:
+    ROhdsiWebApi
+License: Apache License (>= 2)
+LazyData: TRUE
+RoxygenNote: 7.2.3
+Encoding: UTF-8
+Language: en-US
