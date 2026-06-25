@@ -23,20 +23,9 @@ How to run
 
 3. In RStudio, select 'Build' then 'Install and Restart' to build the package.
 
-3. Once installed, you can execute the study by modifying and using the code below. For your convenience, this code is also provided under `extras/CodeToRun.R`:
- 
- 
-	```
-
-4. Upload the file ```export/Results_<DatabaseId>.zip``` in the output folder to the study coordinator:
-
-	```r
-	uploadResults(outputFolder, privateKeyFileName = "<file>", userName = "<name>")
-	```
-	
-	Where ```<file>``` and ```<name<``` are the credentials provided to you personally by the study coordinator.
-		
-5. To view the results, use the Shiny app:
+3. Once installed, you can execute the study by running the code provided under `extras/CodeToRun.R`:
+ 	
+4. To view the results, use the Shiny app:
 
 	```r
 	launchDiagnosticsExplorer()
@@ -54,4 +43,4 @@ FeasibilityENLTN was developed in ATLAS and R Studio.
 
 ### Development status
 
-Unknown
+Done
