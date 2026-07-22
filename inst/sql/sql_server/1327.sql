@@ -5,39 +5,6 @@ CREATE TABLE #Codesets (
 ;
 
 INSERT INTO #Codesets (codeset_id, concept_id)
-SELECT 0 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
-( 
-  select concept_id from @vocabulary_database_schema.CONCEPT where (concept_id in (316866,42709890))
-UNION  select c.concept_id
-  from @vocabulary_database_schema.CONCEPT c
-  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  WHERE c.invalid_reason is null
-  and (ca.ancestor_concept_id in (316866,42709890))
-
-) I
-) C UNION ALL 
-SELECT 1 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
-( 
-  select concept_id from @vocabulary_database_schema.CONCEPT where (concept_id in (4154790))
-UNION  select c.concept_id
-  from @vocabulary_database_schema.CONCEPT c
-  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  WHERE c.invalid_reason is null
-  and (ca.ancestor_concept_id in (4154790))
-
-) I
-) C UNION ALL 
-SELECT 2 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
-( 
-  select concept_id from @vocabulary_database_schema.CONCEPT where (concept_id in (4152194))
-UNION  select c.concept_id
-  from @vocabulary_database_schema.CONCEPT c
-  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  WHERE c.invalid_reason is null
-  and (ca.ancestor_concept_id in (4152194))
-
-) I
-) C UNION ALL 
 SELECT 3 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
 ( 
   select concept_id from @vocabulary_database_schema.CONCEPT where (concept_id in (35506745,35532510,35506447,321119,37019351,1200290,3138305,908338,35624277,436066,45618723,4028808,43010140,3172071,434000,42890556,2721461,439393))
@@ -103,6 +70,28 @@ UNION  select c.concept_id
   and (ca.ancestor_concept_id in (37520829,37520817))
 
 ) I
+) C UNION ALL 
+SELECT 9 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where (concept_id in (3012888,4154790))
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  WHERE c.invalid_reason is null
+  and (ca.ancestor_concept_id in (3012888,4154790))
+
+) I
+) C UNION ALL 
+SELECT 10 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where (concept_id in (4152194,3004249))
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  WHERE c.invalid_reason is null
+  and (ca.ancestor_concept_id in (4152194,3004249))
+
+) I
 ) C;
 
 UPDATE STATISTICS #Codesets;
@@ -129,7 +118,7 @@ from
 (
   select m.person_id,m.measurement_id,m.measurement_concept_id,m.visit_occurrence_id,m.value_as_number,m.range_high,m.range_low,m.unit_concept_id,m.measurement_date as start_date, DATEADD(day,1,m.measurement_date) as end_date 
   FROM @cdm_database_schema.MEASUREMENT m
-JOIN #Codesets cs on (m.measurement_concept_id = cs.concept_id and cs.codeset_id = 1)
+JOIN #Codesets cs on (m.measurement_concept_id = cs.concept_id and cs.codeset_id = 9)
 ) C
 
 WHERE C.value_as_number > 80.0000
@@ -144,7 +133,7 @@ from
 (
   select m.person_id,m.measurement_id,m.measurement_concept_id,m.visit_occurrence_id,m.value_as_number,m.range_high,m.range_low,m.unit_concept_id,m.measurement_date as start_date, DATEADD(day,1,m.measurement_date) as end_date 
   FROM @cdm_database_schema.MEASUREMENT m
-JOIN #Codesets cs on (m.measurement_concept_id = cs.concept_id and cs.codeset_id = 2)
+JOIN #Codesets cs on (m.measurement_concept_id = cs.concept_id and cs.codeset_id = 10)
 ) C
 
 WHERE C.value_as_number > 130.0000
