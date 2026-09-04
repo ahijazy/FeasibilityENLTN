@@ -1,7 +1,7 @@
 ﻿cohort_name,cohortId,atlasId
-HTN population,1305,1305
-CKD population,1314,1314
-HTN measurements only,1327,1327
-CKD measurements only,1328,1328
-Myocardial infarction,1283,1283
-Chronic dialysis,1277,1277
+CKD population conditions only ,1380,1380
+CKD population measurements only v2,1379,1379
+CKD population measurements and conditions,1314,1314
+Hypertensive population measurements only,1378,1378
+Hypertensive population conditions only,1377,1377
+Hypertensive population conditions and measurements,1376,1376
